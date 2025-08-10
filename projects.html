@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FahmyRose | Projects</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1 class="navbar-title">FahmyRose</h1>
+    <ul class="navbar-menu">
+      <li><a href="index.html" class="navbar-link">Home</a></li>
+      <li><a href="projects.html" class="navbar-link">Projects</a></li>
+      <li><a href="about.html" class="navbar-link">About Me</a></li>
+    </ul>
+  </nav>
+
+ <main>
+  <!-- Project Cards -->
+  <section id="project-list" class="projects p-10">
+    <div onclick="showProject('project1', this)" class="project-card clickable">
+      <img src="assets/img/project1-thumb.jpg" alt="Project 1" class="project-thumb" />
+      <h4 class="project-title">Project One</h4>
+      <p class="project-desc small-text">Click to see details</p>
+    </div>
+    <div onclick="showProject('project2', this)" class="project-card clickable">
+      <img src="assets/img/project2-thumb.jpg" alt="Project 2" class="project-thumb" />
+      <h4 class="project-title">Project Two</h4>
+      <p class="project-desc small-text">Click to see details</p>
+    </div>
+    <div onclick="showProject('project3', this)" class="project-card clickable">
+      <img src="assets/img/project3-thumb.jpg" alt="Project 3" class="project-thumb" />
+      <h4 class="project-title">Project Three</h4>
+      <p class="project-desc small-text">Click to see details</p>
+    </div>
+  </section>
+</main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 FahmyRose — All rights reserved</p>
+    <p>Designed & coded by me with ❤️</p>
+  </footer>
+
+  <script>
+    const projects = {
+      project1: {
+        title: "Project One",
+        description: "Full detailed description of Project One...",
+        image: "assets/img/project1.jpg"
+      },
+      project2: {
+        title: "Project Two",
+        description: "Full detailed description of Project Two...",
+        image: "assets/img/project2.jpg"
+      },
+      project3: {
+        title: "Project Three",
+        description: "Full detailed description of Project Three...",
+        image: "assets/img/project3.jpg"
+      }
+    };
+
+    function showProject(id, element) {
+      // Remove highlight from all cards
+      document.querySelectorAll('#project-list > div').forEach(card => {
+        card.classList.remove('highlighted');
+      });
+
+      // Highlight selected card
+      element.classList.add('highlighted');
+
+      // Update details section
+      const p = projects[id];
+      document.getElementById("project-details").innerHTML = `
+        <h2 class="section-title">${p.title}</h2>
+        <img src="${p.image}" alt="${p.title}" class="project-image" />
+        <p class="project-desc">${p.description}</p>
+      `;
+    }
+  </script>
+
+</body>
+</html>
