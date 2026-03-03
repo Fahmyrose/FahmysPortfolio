@@ -77,6 +77,18 @@ a:hover {
   text-decoration: none;
 }
 
+/* Links only inside main */
+main a {
+  color: var(--accent-color);
+  text-decoration: underline;  /* underline for all links inside main */
+  transition: 0.3s;
+}
+
+main a:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  text-decoration: underline;  /* keep underline on hover */
+}
+
 h1,
 h2,
 h3,
