@@ -180,6 +180,23 @@
   });
 
   /**
+   * Carousel functionality for projects section
+   */
+  const row = document.querySelector('.projects-row');
+  const nextBtn = document.querySelector('.carousel-btn.next');
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+
+  const scrollAmount = 320;
+
+  nextBtn.addEventListener('click', () => {
+    row.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+
+  prevBtn.addEventListener('click', () => {
+    row.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
+
+  /**
    * Navmenu Scrollspy
    */
   let navmenulinks = document.querySelectorAll('.navmenu a');
