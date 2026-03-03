@@ -219,3 +219,31 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+// Contact Modal
+document.addEventListener("DOMContentLoaded", function () {
+
+  const modal = document.getElementById("contactModal");
+  const contactBtn = document.querySelector(".nav-contact"); // we’ll add this class
+  const closeBtn = document.querySelector(".close-btn");
+
+  if (contactBtn) {
+    contactBtn.addEventListener("click", function () {
+      modal.style.display = "flex";
+    });
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
+  }
+
+  // Close when clicking outside
+  window.addEventListener("click", function (e) {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+
+})();
