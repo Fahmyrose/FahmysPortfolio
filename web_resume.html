@@ -4,13 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Starter Page - Laura Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>FahmysPortfolio</title>
+  <meta name="description" content="Fahmy's Portfolio - showcasing my work and skills">
+  <meta name="keywords" content="portfolio, Fahmy, web development, design">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -36,51 +35,29 @@
   ======================================================== -->
 </head>
 
-<body class="starter-page-page">
+<body class="index-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+    <div class="container-fluid d-flex align-items-center">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Laura</h1>
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <h1 class="sitename">Fahmida's Portfolio</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li><a href="#resume">Resume</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#" class="nav-contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
       <div class="header-social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/Fahmyrose/" target="_blank" class="twitter" alt="GitHub Profile"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/fahmyrose00/" target="_blank" class="linkedin" alt="LinkedIn Profile"><i class="bi bi-linkedin"></i></a>
       </div>
 
     </div>
@@ -120,20 +97,85 @@
 
   </main>
 
+   <!-- Contact Modal -->
+<div id="contactModal" class="contact-modal">
+
+  <div class="contact-window">
+
+    <!-- Close Button -->
+    <span class="close-btn" onclick="closeContact()">&times;</span>
+
+    <!-- Top Text -->
+    <div class="contact-intro">
+      <h2>Contact Me</h2>
+      <p>
+        Thanks for visiting my portfolio 🤍  
+        Don’t hesitate to contact me for collaborations, projects, or just to say hello!
+      </p>
+    </div>
+
+    <div class="contact-content">
+
+      <!-- LEFT: WhatsApp and LINE QRcodes -->
+      <div class="contact-left">
+
+        <h4>Chat With Me</h4>
+
+        <div class="qr-wrapper">
+
+          <div class="qr-block">
+            <p>WhatsApp</p>
+            <img src="assets/img/my_wa_qrcode.jpeg" alt="WhatsApp QR" class="qr-code">
+          </div>
+
+          <div class="qr-block">
+            <p>LINE</p>
+            <img src="assets/img/my_line_qrcode.jpeg" alt="LINE QR" class="qr-code">
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT: Email Form -->
+      <div class="contact-right">
+
+        <h4>Send Me a Message</h4>
+
+        <form action="https://formspree.io/f/xjgengwr" method="POST">
+          
+          <input type="text" name="name" placeholder="Your Name" required>
+          
+          <input type="email" name="email" placeholder="Your Email" required>
+          
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+          <button type="submit">Send Message</button>
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </main>
+
   <footer id="footer" class="footer position-relative dark-background">
     <div class="container">
-      <h3 class="sitename">Laura Thomson<br></h3>
+      <h3 class="sitename">Fahmida Islam<br></h3>
       <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
       <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-skype"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/Fahmyrose/" target="_blank" class="twitter" alt="GitHub Profile"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/fahmyrose00/" target="_blank" class="linkedin" alt="LinkedIn Profile"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.instagram.com/fahmy_rose/" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://open.spotify.com/playlist/7kJf945lWpHI6HFJIFmYUo?si=fdebe80c454e40db" target="_blank"><i class="bi bi-spotify"></i></a>
+        <a href="https://it.pinterest.com/fahmyrose/_profile/" target="_blank"><i class="bi bi-pinterest"></i></a>
       </div>
       <div class="container">
         <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">Laura</strong> <span>All Rights Reserved</span>
+          <span>Copyright</span> <strong class="px-1 sitename">Fahmida Islam</strong> <span>All Rights Reserved</span>
         </div>
         <div class="credits">
           <!-- All the links in the footer should remain intact. -->
@@ -150,7 +192,9 @@
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
-  <div id="preloader"></div>
+  <div id="preloader">
+  <img src="assets/img/favicon.png" alt="Personal Logo" class="preloader-logo">
+</div>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
