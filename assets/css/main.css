@@ -868,6 +868,105 @@ section,
   transform: scale(1.15);
 }
 
+.important-note-section a:hover {
+  color: color-mix(in srgb, var(--accent-color), black 20%);
+}
+
+/*--------------------------------------------------------------
+# Important Note Section
+--------------------------------------------------------------*/
+
+.important-note-section {
+  padding: 100px 0;
+  background: linear-gradient(
+    180deg,
+    var(--background-color) 0%,
+    color-mix(in srgb, var(--accent-color), transparent 95%) 100%
+  );
+  position: relative;
+}
+
+/* Card effect */
+.important-note-section .section-title {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: 0.4s ease;
+}
+
+.important-note-section .section-title:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.12);
+}
+
+/* Small label on top */
+.important-note-section .description-title {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+}
+
+/* Main title */
+.important-note-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Subheading */
+.important-note-section h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-bottom: 25px;
+}
+
+/* Paragraph styling */
+.important-note-section p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+/* Links inside this section */
+.important-note-section a {
+  color: var(--accent-color);
+  font-weight: 600;
+  text-decoration: underline;
+  transition: 0.3s ease;
+}
+
+.important-note-section a:hover {
+  color: color-mix(in srgb, var(--accent-color), black 20%);
+}
+
+/* Resume CTA */
+.important-note-section p:last-of-type a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  border-radius: 50px;
+  background: var(--accent-color);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.important-note-section p:last-of-type a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px color-mix(in srgb, var(--accent-color), transparent 60%);
+}
+
 /*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
