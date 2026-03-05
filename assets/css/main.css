@@ -772,16 +772,17 @@ section,
 
 .project-card {
   flex: 0 0 280px;
-  background: #31354D;
+  background: #a2a6c7;
   border-radius: 20px;
   padding: 1.5rem;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .project-card p {
-  color: #000000;
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
+  color: #00000083;
+  font-size: 0.7rem;
+  margin-bottom: 0.9rem;
+  justify-content: center;
 }
 
 .project-card:hover {
@@ -805,7 +806,7 @@ section,
 
 /* Project Title */
 .project-title {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   margin: 1rem 0;
   color: #fff;
 }

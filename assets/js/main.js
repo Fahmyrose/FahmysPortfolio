@@ -183,9 +183,10 @@
    * Carousel functionality for projects section
    */
   const row = document.querySelector('.projects-row');
-  const nextBtn = document.querySelector('.carousel-btn.next');
-  const prevBtn = document.querySelector('.carousel-btn.prev');
+const nextBtn = document.querySelector('.carousel-btn.next');
+const prevBtn = document.querySelector('.carousel-btn.prev');
 
+if (row && nextBtn && prevBtn) {
   const scrollAmount = 320;
 
   nextBtn.addEventListener('click', () => {
@@ -195,6 +196,7 @@
   prevBtn.addEventListener('click', () => {
     row.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
   });
+}
 
   /**
    * Navmenu Scrollspy
@@ -203,7 +205,7 @@
 
   function navmenuScrollspy() {
     navmenulinks.forEach(navmenulink => {
-      if (!navmenulink.hash) return;
+      if (!navmenulink.hash || navmenulink.classList.contains('nav-contact')) return;
       let section = document.querySelector(navmenulink.hash);
       if (!section) return;
       let position = window.scrollY + 200;
@@ -215,6 +217,7 @@
       }
     })
   }
+  window.navmenuScrollspy = navmenuScrollspy;
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
@@ -224,26 +227,52 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   const modal = document.getElementById("contactModal");
-  const contactBtn = document.querySelector(".nav-contact"); // we’ll add this class
+  const contactBtn = document.querySelector(".nav-contact");
   const closeBtn = document.querySelector(".close-btn");
+  const navLinks = document.querySelectorAll('.navmenu a');
 
-  if (contactBtn) {
-    contactBtn.addEventListener("click", function () {
-      modal.style.display = "flex";
-    });
+  if (!modal || !contactBtn) return;
+
+  let previousActive = null; // 🔥 store previous active link
+
+  function openModal() {
+    modal.style.display = "flex";
+
+    // Save currently active link
+    previousActive = document.querySelector('.navmenu a.active');
+
+    // Remove active from all
+    navLinks.forEach(link => link.classList.remove('active'));
+
+    // Activate Contact
+    contactBtn.classList.add('active');
   }
+
+  function closeModal() {
+    modal.style.display = "none";
+
+    // Remove active from Contact
+    contactBtn.classList.remove('active');
+
+    // Restore previously active link
+    if (previousActive) {
+      previousActive.classList.add('active');
+    }
+  }
+
+  contactBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    openModal();
+  });
 
   if (closeBtn) {
-    closeBtn.addEventListener("click", function () {
-      modal.style.display = "none";
-    });
+    closeBtn.addEventListener("click", closeModal);
   }
 
-  // Close when clicking outside
   window.addEventListener("click", function (e) {
     if (e.target === modal) {
-      modal.style.display = "none";
+      closeModal();
     }
   });
 
-})();
+});
