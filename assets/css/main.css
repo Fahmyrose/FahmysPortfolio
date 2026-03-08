@@ -22,7 +22,7 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #A1A8D7; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #DB9C76; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #9e304b; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --resume-surface: #1E1E2F; /* A specific surface color used for the resume section, providing a distinct background that enhances readability and visual appeal for the resume content. */
   --contrast-color: #000000; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
@@ -31,11 +31,11 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #ffffff;  /* The default color of the main navmenu links */
-  --nav-hover-color: #DB9C76; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #9e304b; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #DB9C76; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #9e304b; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -1146,6 +1146,14 @@ PROJECT HTML STYLES
   border-radius: 20px;
 }
 
+/* Hover effect */
+
+.project-tech span:hover {
+  background: var(--accent-color);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
 /* =============================
    STATUS BADGE
 ============================= */
@@ -1213,12 +1221,12 @@ PROJECT HTML STYLES
 
 /* GitHub button */
 .btn-github {
-  border: 1px solid rgba(255,255,255,0.3);
+  border: 1px solid rgba(227, 214, 214, 0.169);
   color: #fff;
 }
 
 .btn-github:hover {
-  background: rgba(255,255,255,0.1);
+  background: rgba(204, 51, 51, 0.1);
   transform: translateY(-3px);
 }
 
@@ -1271,7 +1279,7 @@ PROJECT HTML STYLES
 /* Masonry Layout */
 
 .resume-grid {
-  column-count: 3;
+  column-count: 4;
   column-gap: 25px;
 }
 
@@ -1344,47 +1352,54 @@ PROJECT HTML STYLES
 
 /*--------------------------------------------------------------
 # Skill Tags
+/*--------------------------------------------------------------
+# Skills Cards
 --------------------------------------------------------------*/
 
-.skill-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+.skills-card,
+.softskills-card {
+  padding: 20px;
 }
 
-.skill-tags span {
-  padding: 6px 12px;
+/* Skills grid container */
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Skill badges */
+
+.skill-badge {
+  display: inline-block;
+  padding: 7px 14px;
+  font-size: 12px;
   border-radius: 20px;
-  background: rgba(255,255,255,0.1);
-  font-size: 13px;
+
+  background: rgba(255,255,255,0.12);
+  color: #ffffff;
+
+  transition: all 0.25s ease;
+}
+
+/* Hover effect */
+
+.skill-badge:hover {
+  background: var(--accent-color);
+  color: #ffffff;
+  transform: translateY(-2px);
 }
 
 /*--------------------------------------------------------------
 # Language Bars
 --------------------------------------------------------------*/
 
-.language {
-  margin-bottom: 12px;
-}
-
-.language span {
+.language-item {
   display: block;
-  font-size: 14px;
+  font-size: 12px;
   margin-bottom: 4px;
-}
-
-.language-bar {
-  width: 100%;
-  height: 6px;
-  border-radius: 10px;
-  background: rgba(255,255,255,0.15);
-  overflow: hidden;
-}
-
-.language-bar div {
-  height: 100%;
-  background: var(--accent-color);
-  border-radius: 10px;
 }
 
 /*--------------------------------------------------------------
@@ -1398,15 +1413,36 @@ PROJECT HTML STYLES
 }
 
 .software-grid img {
-  width: 50px;
-  height: 50px;
+  width: auto;
+  height: 40px;
   object-fit: contain;
-  border-radius: 20px;
+  border-radius: 12px;
   transition: transform .2s ease;
 }
 
 .software-grid img:hover {
   transform: scale(1.15);
+}
+
+/*--------------------------------------------------------------
+# Education block
+--------------------------------------------------------------*/
+.education-item h5 {
+  font-size: 16px;
+  color: #9e304b;
+  font-weight: bold;
+}
+
+.education-item span {
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.education-item p {
+  font-size: 12px;
+  color: #ffffff;
+  margin-bottom: 10px;
 }
 
 /*--------------------------------------------------------------
@@ -1426,9 +1462,40 @@ PROJECT HTML STYLES
   background: rgba(255,255,255,0.08);
 }
 
-.hobby-grid i {
-  font-size: 20px;
+.hobby {
+  font-size: 12px;
   margin-bottom: 5px;
+}
+
+/*--------------------------------------------------------------
+# Services Card
+--------------------------------------------------------------*/
+
+.services-grid{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:10px;
+}
+
+.service-pill{
+padding:10px 14px;
+border-radius:12px;
+font-size:14px;
+background:rgba(255,255,255,0.08);
+transition:all .25s ease;
+cursor:default;
+}
+
+.service-pill::before{
+content:"✦";
+margin-right:6px;
+opacity:.7;
+}
+
+.service-pill:hover{
+background:var(--accent-color);
+transform:translateY(-3px);
 }
 
 /*--------------------------------------------------------------
