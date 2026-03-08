@@ -1268,12 +1268,11 @@ PROJECT HTML STYLES
   padding: 40px 20px;
 }
 
-/* Grid Layout */
+/* Masonry Layout */
 
 .resume-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 25px;
+  column-count: 3;
+  column-gap: 25px;
 }
 
 /* Cards */
@@ -1285,7 +1284,12 @@ PROJECT HTML STYLES
   color: #ffffff;
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
   transition: transform .3s ease, box-shadow .3s ease;
-  position: relative;
+  
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 25px;
+
+  break-inside: avoid; /* prevents cards splitting */
 }
 
 .resume-card:hover {
@@ -1295,7 +1299,8 @@ PROJECT HTML STYLES
 
 /* Section titles */
 
-.resume-card h3 {
+.resume-card h3,
+.resume-card h4 {
   font-size: 20px;
   margin-bottom: 15px;
   font-weight: 600;
@@ -1315,6 +1320,15 @@ PROJECT HTML STYLES
   gap: 10px;
   margin-bottom: 10px;
   font-size: 15px;
+}
+
+/* Bio image */
+
+.bio-inner img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  margin-bottom: 15px;
 }
 
 /* Icons */
@@ -1341,7 +1355,7 @@ PROJECT HTML STYLES
 .skill-tags span {
   padding: 6px 12px;
   border-radius: 20px;
-  background: rgba(0,0,0,0.05);
+  background: rgba(255,255,255,0.1);
   font-size: 13px;
 }
 
@@ -1363,7 +1377,7 @@ PROJECT HTML STYLES
   width: 100%;
   height: 6px;
   border-radius: 10px;
-  background: rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.15);
   overflow: hidden;
 }
 
@@ -1408,12 +1422,28 @@ PROJECT HTML STYLES
 .hobby-grid div {
   padding: 10px;
   border-radius: 10px;
-  background: rgba(0,0,0,0.03);
+  background: rgba(255,255,255,0.08);
 }
 
 .hobby-grid i {
   font-size: 20px;
   margin-bottom: 5px;
+}
+
+/*--------------------------------------------------------------
+# Responsive
+--------------------------------------------------------------*/
+
+@media (max-width: 992px) {
+  .resume-grid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .resume-grid {
+    column-count: 1;
+  }
 }
 
 /*--------------------------------------------------------------
