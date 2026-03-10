@@ -814,7 +814,7 @@ section,
 
 .project-card {
   flex: 0 0 280px;
-  background: #5C90BE;
+  background: #7573aef0;
   border-radius: 20px;
   padding: 1.5rem;
   text-align: center;
@@ -1661,6 +1661,101 @@ transform:translateY(-3px);
   .experience-gallery {
     grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
   }
+}
+
+/*--------------------------------------------------------------
+# LINKEDIN PROFILE CARD (COMPACT)
+--------------------------------------------------------------*/
+
+.linkedin-card{
+  margin:50px auto 0;
+  padding:20px 24px;
+  border-radius:14px;
+  background:linear-gradient(135deg,#7573aef0,#9e304b);
+  color:#fff;
+  box-shadow:0 10px 25px rgba(0,0,0,0.12);
+
+  max-width:600px;   /* controls card width */
+}
+
+.linkedin-card-content{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.linkedin-text{
+  flex:1;
+}
+
+.linkedin-text h4{
+  font-size:16px;
+  font-weight:600;
+  margin-bottom:3px;
+  color: rgb(25, 8, 61);
+}
+
+.linkedin-text p{
+  font-size:13px;
+  opacity:0.9;
+  margin:0;
+}
+
+.linkedin-visit{
+  background:#ffffff;
+  color:#9e304b;
+  padding:8px 16px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:600;
+  text-decoration:none;
+  transition:all .25s ease;
+}
+
+.linkedin-visit:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 14px rgba(0,0,0,0.15);
+}
+
+/* Buttons container */
+.profile-buttons{
+  display:flex;
+  gap:10px;
+}
+
+/* LinkedIn button (already existing but keeping it consistent) */
+.linkedin-visit{
+  background:#ffffff;
+  color:#0A66C2;
+  padding:8px 16px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:600;
+  text-decoration:none;
+  transition:all .25s ease;
+}
+
+/* CV button */
+.cv-download{
+  background:transparent;
+  border:1.5px solid #ffffff;
+  color:#ffffff;
+  padding:8px 16px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:600;
+  text-decoration:none;
+  transition:all .25s ease;
+}
+
+.cv-download:hover{
+  background:#ffffff;
+  color:#0A66C2;
+}
+
+.linkedin-visit:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 14px rgba(0,0,0,0.15);
 }
 
 /*--------------------------------------------------------------
