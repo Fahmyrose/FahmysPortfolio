@@ -641,7 +641,6 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
   scroll-margin-top: 80px;
   overflow: clip;
 }
@@ -824,6 +823,35 @@ section,
   margin-right: 5px;
   color: var(--accent-color);
   line-height: 0;
+}
+
+/* ===============================
+   ABOUT SECTION - SMALL MOBILE
+=================================*/
+@media (max-width: 480px) {
+
+  /* Reduce vertical spacing */
+  .about.section {
+    padding: 0px 20px;
+  }
+
+  /* Smaller section title */
+  .about .section-title h2 {
+    font-size: 22px;
+  }
+
+  /* Smaller subtitle */
+  .about .section-title .description-title {
+    font-size: 30px;
+  }
+
+  /* Make paragraph more compact */
+  .about .section-title p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 10px;
+  }
+
 }
 
 /* =========================================
