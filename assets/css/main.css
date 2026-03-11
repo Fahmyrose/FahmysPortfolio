@@ -303,23 +303,26 @@ h6 {
     z-index: 10001;  /* above overlay */
   }
 
-  /* Hide desktop nav */
-  .navmenu ul {
-    display: none;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    flex-direction: column;
-    position: fixed;
-    top: 70px;
-    left: 0;
-    right: 0;
-    background: var(--nav-mobile-background-color);
-    padding: 20px;
-    z-index: 9998;
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-  }
+/* Hide desktop nav */
+/* Mobile dropdown menu */
+.navmenu ul {
+  display: none;
+  list-style: none;
+  padding: 15px;
+  margin: 0;
+  flex-direction: column;
+
+  position: fixed;
+  top: 70px;
+  right: 15px;   /* stick to right side */
+  width: 200px;  /* smaller box */
+
+  background: var(--nav-mobile-background-color);
+  z-index: 9998;
+
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
 
   /* Show menu when toggle active */
   .mobile-nav-active .navmenu ul {
@@ -380,6 +383,38 @@ h6 {
     right: 20px;
     font-size: 32px;
     z-index: 10001;
+  }
+}
+
+/* ===============================
+   SMALL MOBILE (480px and below)
+=================================*/
+@media (max-width: 480px) {
+
+  /* Smaller logo image */
+  .header .logo img {
+    max-height: 38px;
+    margin-right: 6px;
+  }
+
+  /* Smaller site name */
+  .header .logo h1 {
+    font-size: 18px;
+  }
+
+  /* Slightly smaller icons */
+  .header .header-social-links a {
+    font-size: 14px;
+  }
+
+  /* Toggle slightly smaller */
+  .mobile-nav-toggle {
+    font-size: 20px;
+  }
+
+  /* Reduce nav link size in mobile menu */
+  .navmenu a {
+    font-size: 16px;
   }
 }
 
@@ -743,6 +778,22 @@ section,
   100% {
     transform: translateY(-5px);
   }
+}
+
+/* ===============================
+   HERO FIX FOR SMALL MOBILE
+=================================*/
+@media (max-width: 480px) {
+
+  .hero {
+    min-height: 65vh;   /* prevent huge hero */
+    padding: 90px 0 40px 0;
+  }
+
+  .hero img {
+    object-fit: contain;   /* prevents aggressive zoom */
+  }
+
 }
 
 /*--------------------------------------------------------------
