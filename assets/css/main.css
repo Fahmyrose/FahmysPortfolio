@@ -446,7 +446,7 @@ h6 {
 /* Site name */
 .footer h3 {
   text-align: center;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
   margin-bottom: 10px;
 }
@@ -517,6 +517,37 @@ h6 {
 .footer .credits {
   font-size: 12px;
   margin-top: 4px;
+}
+
+/* ===============================
+   FOOTER TABLET (992px)
+=================================*/
+@media (max-width: 992px) {
+
+  .footer .footer-container {
+    gap: 30px;
+    justify-content: center;
+  }
+
+  /* First column full width */
+  .footer-info {
+    flex: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  /* Contact + socials side by side */
+  .footer-contact,
+  .footer-socials {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+
+  /* Center social icons */
+  .footer .social-links {
+    justify-content: center;
+  }
+
 }
 /*--------------------------------------------------------------
 # Preloader
@@ -1310,37 +1341,186 @@ PROJECT HTML STYLES
 }
 
 /* =============================
-   RESPONSIVE
+   TABLET (992px)
 ============================= */
 
 @media (max-width: 992px) {
 
   .project {
     min-height: auto;
-    padding: 80px 0;
+    padding: 80px 20px;
   }
 
   .project-inner {
     flex-direction: column !important;
+    align-items: center;
   }
 
   .project-media,
   .project-content {
     flex: 100%;
-    padding: 40px;
+    padding: 30px;
     text-align: center;
   }
 
-  .project-content {
-    max-width: 100%;
+  .project-media img {
+    max-width: 90%;
+    height: auto;
   }
 
-  .project-title {
+  .project-content {
+    max-width: 700px;
+  }
+
+  .projects-title {
     font-size: 32px;
+  }
+
+  .project-summary {
+    margin-bottom: 20px;
+    max-width: 600px;
+    text-align: center;
+  }
+
+  .project-tech {
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .project-buttons {
     justify-content: center;
+  }
+
+}
+
+
+/* =============================
+   SMALL MOBILE (480px)
+============================= */
+
+@media (max-width: 480px) {
+
+  .project {
+    padding: 60px 15px;
+  }
+
+  .project-media,
+  .project-content {
+    padding: 20px;
+  }
+
+  .projects-title {
+    font-size: 26px;
+  }
+
+  .project-category {
+    font-size: 12px;
+  }
+
+  .project-summary {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+
+  }
+
+  .project-tech span {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+
+  .project-buttons a {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+}
+
+/*--------------------------------------------------------------
+# GitHub Section
+--------------------------------------------------------------*/
+
+#github {
+  padding: 80px 0;
+}
+
+#github h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+#github p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.github-preview {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  margin: 20px auto;
+  display: block;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+#github hr {
+  width: 120px;
+  margin: 30px auto;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+#github a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#github a:hover {
+  text-decoration: underline;
+}
+
+/*--------------------------------------------------------------
+TABLET
+---------------------------------------------------------------*/
+
+@media (max-width: 992px) {
+
+  #github {
+    padding: 70px 20px;
+  }
+
+  #github h2 {
+    font-size: 28px;
+  }
+
+  .github-preview {
+    max-width: 500px;
+  }
+
+}
+
+/*--------------------------------------------------------------
+PHONE
+---------------------------------------------------------------*/
+
+@media (max-width: 480px) {
+
+  #github {
+    padding: 60px 15px;
+  }
+
+  #github h2 {
+    font-size: 24px;
+  }
+
+  #github p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .github-preview {
+    max-width: 100%;
   }
 
 }
