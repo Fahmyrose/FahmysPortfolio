@@ -435,7 +435,6 @@ h6 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 60px;
 }
 
 /* Footer columns */
@@ -446,6 +445,7 @@ h6 {
 
 /* Site name */
 .footer h3 {
+  text-align: center;
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 10px;
@@ -453,6 +453,7 @@ h6 {
 
 /* Footer role / description */
 .footer p {
+  text-align: center;
   font-size: 14px;
   font-style: italic;
   margin: 0 0 10px 0;
@@ -998,7 +999,6 @@ section,
 --------------------------------------------------------------*/
 
 .important-note-section {
-  padding: 100px 0;
   background: linear-gradient(
     180deg,
     var(--background-color) 0%,
@@ -1009,7 +1009,7 @@ section,
 
 /* Card effect */
 .important-note-section .section-title {
-  max-width: 900px;
+  max-width: fit-content;
   margin: 0 auto;
   padding: 60px;
   background: #ffffff;
