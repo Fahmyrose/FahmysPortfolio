@@ -303,6 +303,15 @@ h6 {
     z-index: 10001;  /* above overlay */
   }
 
+  /* Better spacing between mobile nav items */
+.navmenu ul li {
+  margin-bottom: 8px;
+}
+
+.navmenu ul li:last-child {
+  margin-bottom: 0;
+}
+
 /* Hide desktop nav */
 /* Mobile dropdown menu */
 .navmenu ul {
@@ -331,7 +340,7 @@ h6 {
 
   /* Links inside toggle */
   .navmenu a {
-    padding: 15px 20px;
+    padding: 18px 20px;
     font-size: 17px;
     font-weight: 500;
     color: var(--nav-dropdown-color);
