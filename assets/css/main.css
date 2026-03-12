@@ -566,7 +566,7 @@ h6 {
 
 /* Rotating logo */
 .preloader-logo {
-  width: 80px;  /* adjust size */
+  width: 100px;  /* adjust size */
   height: auto;
   animation: rotate-logo 1.5s linear infinite;
 }
