@@ -777,6 +777,9 @@ section,
   font-weight: 500;
   letter-spacing: 1px;
 }
+/* ===============================
+   HERO TABLET
+=================================*/
 
 @media (max-width: 640px) {
   .hero h1 {
@@ -811,6 +814,20 @@ section,
   }
 }
 
+/* ===============================
+   HERO FIX FOR TABLET PORTRAIT
+=================================*/
+@media (max-width: 1024px) and (orientation: portrait) {
+
+.hero {
+  background: #fff; /* or your background color */
+}
+
+  .hero img {
+    object-fit: contain;   /* prevents zoom on face */
+  }
+
+}
 /* ===============================
    HERO FIX FOR SMALL MOBILE
 =================================*/
