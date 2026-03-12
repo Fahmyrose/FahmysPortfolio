@@ -690,7 +690,7 @@ section,
 --------------------------------------------------------------*/
 .section-title {
   text-align: center;
-  padding: 30px 0;
+  padding: 30px 30px 30px 30px;
   margin-bottom: 30px;
   position: relative;
 }
@@ -861,11 +861,6 @@ section,
    ABOUT SECTION - SMALL MOBILE
 =================================*/
 @media (max-width: 480px) {
-
-  /* Reduce vertical spacing */
-  .about.section {
-    padding: 0px 20px;
-  }
 
   /* Smaller section title */
   .about .section-title h2 {
