@@ -476,7 +476,7 @@ h6 {
   margin-top: 8px;
   font-weight: 600;
   font-size: 14px;
-  color: var(--accent-color);
+  color: #dd7b93;
   text-decoration: none;
   transition: 0.3s ease;
 }
@@ -1299,7 +1299,7 @@ PROJECT HTML STYLES
   align-items: center;
   justify-content: center;
   font-size: 15px;
-  padding: 8px 16px;
+  padding: 15px;
   border-radius: 30px;
   margin-bottom: 30px;
   font-weight: 500;
@@ -1362,7 +1362,8 @@ PROJECT HTML STYLES
 }
 
 .btn-github:hover {
-  background: rgba(204, 51, 51, 0.1);
+  background: #dd7b93;
+  color: #000;
   transform: translateY(-3px);
 }
 
@@ -2022,6 +2023,7 @@ transform:translateY(-3px);
 .cv-download:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  color: #000
 }
 
 /* =========================================
