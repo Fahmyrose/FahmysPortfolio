@@ -1,4 +1,4 @@
-# ✨ My Portfolio Website (ver. 1.0) ✨ 
+# ✨ <img src="assets/img/logo_emoji.png" alt="Logo Emoji" style="width: 20px; margin-top: 20px;"> My Portfolio Website (ver. 1.0) ✨ 
 
 Welcome to the repo for my **personal portfolio website**: a small digital space where I showcase my projects, skills and experiments in UX/UI, web design, game ideas, graphics and creative development.
 
@@ -50,4 +50,4 @@ Feel free to reach out or just say hi👋!
 
 ---
 
-⭐ If you like the website, feel free to explore the code or leave a star! ~ Fahmy
+⭐ If you like the website, feel free to explore the code or leave a star! ~ Fahmy <img src="assets/img/logo_jamming.gif" alt="Logo Jamming" style="width: 15px; margin-top: 20px;">
