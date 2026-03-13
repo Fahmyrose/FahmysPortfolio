@@ -33,7 +33,7 @@ This portfolio was designed and built to reflect both my **design mindset** and 
 
 You can explore the portfolio here:
 
-Live Portfolio: https://github.com/Fahmyrose/FahmysPortfolio 
+Live Portfolio: https://fahmyrose.github.io/FahmysPortfolio/ 
 
 ## 🌱 Currently
 
