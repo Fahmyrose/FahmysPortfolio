@@ -1,4 +1,4 @@
-# ✨ <img src="assets/img/logo_emoji.png" alt="Logo Emoji" style="width: 35px;"> My Portfolio Website (ver. 1.0) ✨ 
+# ✨ My Portfolio Website<img src="assets/img/logo_emoji.png" alt="Logo Emoji" style="width: 35px;"> (ver. 1.0) ✨ 
 
 Welcome to the repo for my **personal portfolio website**: a small digital space where I showcase my projects, skills and experiments in UX/UI, web design, game ideas, graphics and creative development.
 
